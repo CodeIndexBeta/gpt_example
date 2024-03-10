@@ -1,0 +1,42 @@
+MTLX Tokenomics
+This document provides a detailed overview of the current and proposed token distribution for the Mettalex token ($MTLX). Understanding the token allocation is crucial for stakeholders, investors, and users to comprehend the economics and the intrinsic value proposition of the Mettalex ecosystem.
+
+Current Token Distribution
+Allocation	Amount	Percentage
+Liquidity Providers Rewards	35 million	87.5
+Initial Distribution to FET Stakers	1 million	2.5
+Reserve for Further FET Staking	1 million	2.5
+Team (Distributed Over 3 Years)	1 million	2.5
+Stakeholders (Distributed Over 1 Year)	2 million	5
+New Token Distribution
+Allocation	Amount	Percentage
+Initial Distribution to FET Stakers	1 million	2.5%
+Reserve for Further FET Staking	1 million	2.5%
+Team (Distributed Over 3 Years)	1 million	2.5%
+Stakeholders (Distributed Over 1 Year)	2 million	5%
+Community Engagement & Reward	1 million	2.5%
+Foundation	2 million	5%
+Overcollateralization for Commodities using value of MTLX	32 million	80%
+The proposed new distribution model is aimed at further engaging the community, ensuring a solid backing for tokenized commodities, and supporting the long-term sustainability of the platform.
+
+Initial Distribution to FET Stakers: 1 million $MTLX (2.5%)     - Continues the initial support for FET stakers, acknowledging their crucial role in the ecosystem.
+
+Reserve for Further FET Staking: 1 million $MTLX (2.5%)     - Maintains the reserve for incentivizing future FET staking and engagement.
+
+Team (Distributed Over 3 Years): 1 million $MTLX (2.5%)     - Continuation of the team's allocation, ensuring ongoing commitment and development.
+
+Stakeholders (Distributed Over 1 Year): 2 million $MTLX (5%)     - Continues to reward stakeholders for their investment and support.
+
+Community Engagement & Reward: 1 million $MTLX (2.5%)     - A new allocation to foster and reward active community participation and engagement.
+
+Foundation: 2 million $MTLX (5%)     - Allocated to the foundation to support the ongoing development, governance, and sustainability of the Mettalex platform.
+
+Overcollateralization for Commodities Using Value of MTLX (80%)     - This significant allocation is to ensure that the commodities tokenized on the platform have a solid backing and are not created out of thin air. It aims to maintain the integrity and trust of the tokenization process.
+
+mettalex tokenomics
+
+Conclusion
+The proposed changes in the $MTLX token distribution are designed to align with Mettalex's strategic vision of creating a robust and decentralized trading platform. By ensuring a solid backing for the tokenized commodities and incentivizing various stakeholders, Mettalex is committed to fostering a healthy and sustainable ecosystem. These changes reflect the platform's dedication to transparency, community engagement, and long-term success.
+
+Note: Preliminary and Subject to Change
+The details and specifics of the new token distribution model for the Mettalex ($MTLX) ecosystem are preliminary and may be adjusted based on ongoing reviews, community feedback, and market conditions. Please refer to official Mettalex communications for the most current updates and information. Your understanding and engagement are appreciated as we refine our approach.

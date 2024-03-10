@@ -1,0 +1,31 @@
+Trading On Mettalex
+Welcome to the guide on trading with Mettalex's revolutionary Agent-based architecture. In this section, you'll learn how to place and manage trades using the Mettalex platform.
+
+Placing a Trade
+Trading on Mettalex involves a straightforward process that takes advantage of the platform's Agent-based system. Here's how it works:
+
+Locking Funds in Contract : To initiate a trade, you'll lock your funds in a secure smart contract. This step ensures the integrity and security of your trade.
+
+Preferred Agent Selection : You can choose a preferred Agent to execute your trade. The preferred Agent will carry out your trade, but if it doesn't complete, don't worry – there's a backup plan.
+
+Matching with Other Agents : If your preferred Agent doesn't fulfill your trade, Mettalex offers the flexibility of matching with other available agents. This redundancy ensures that your trade is executed, no matter what.
+
+Inputting Tokens for Trade : When placing a trade, you'll need to specify the number of tokens you're selling (which will be locked in escrow) and the number of tokens you intend to buy. This information guides the execution of your trade.
+
+Managing Trades
+Managing your trades on Mettalex is designed to be user-friendly and transparent:
+
+Canceling Orders : If your trading plans change, you have the option to cancel your order. By using the refund function, you can cancel the trade and retrieve your locked tokens.
+
+Real-Time Agent Logs : Mettalex provides a unique "feature – real-time" viewing of your user Agent logs. This transparency allows you to monitor the progress and details of your ongoing trades.
+
+Transparent Agent Communication : The communication process between agents on Mettalex is transparent and easily observable. This transparency enhances the reliability and trustworthiness of the trading process.
+
+On-Chain Transaction Logs : All transaction logs related to your trades are recorded on-chain and visible to users. This adds an extra layer of transparency and accountability to the entire trading process.
+
+Conclusion
+Trading on Mettalex offers a fresh perspective on decentralized exchanges. By following the steps outlined in this guide, you'll be well-equipped to confidently place and manage trades on the platform.
+
+Should you encounter any difficulties or have further questions, our support resources and community are here to assist.
+
+Note: The trading process and features may be subject to updates and improvements. Stay tuned for the latest information.

@@ -1,0 +1,21 @@
+Initializing Your Account
+onboarding architecture
+
+Components:
+
+Blockchain: The foundational technology facilitating various operations.
+Escrow Contract Factory: The component responsible for creating escrow contracts.
+Escrow Contract: A contract for holding funds or assets until specific conditions are met.
+Agent Factory: The component responsible for creating agents.
+Actions:
+
+Request to Create Escrow: A user initiates a request to create an escrow.
+Contract Creation: The Escrow Contract Factory creates a new contract.
+Notify User: The user is notified once the escrow contract is created.
+Map Created Escrow: The created escrow is mapped in the system.
+Notify User: The user is further notified about the mapping status.
+Request for Agent Creation: A request is made to create a new agent.
+Agent Creation: The Agent Factory creates a new agent.
+Notify User: The user is notified upon successful agent creation.
+Map Agent: The created agent is mapped in the system.
+Note: This architecture is subject to change as the architecture evolves. Ensure that it is regularly updated to reflect the most current state of system's architecture.

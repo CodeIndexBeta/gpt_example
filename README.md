@@ -1,0 +1,1 @@
+https://github.com/sitepoint-editors/chatbot_Tutorial/blob/main/embeddings.py
