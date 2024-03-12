@@ -7,5 +7,5 @@ class CreateClient:
     def __new__(cls, *args, **kwargs):
         if cls._instance is None:
             cls._instance = super().__new__(cls, *args, **kwargs)
-            cls._instance = OpenAI(api_key='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')
+            cls._instance = OpenAI(api_key='')
         return cls._instance

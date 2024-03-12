@@ -1,5 +1,5 @@
 Trading On Mettalex
-Welcome to the guide on trading with Mettalex's revolutionary Agent-based architecture. In this section, you'll learn how to place and manage trades using the Mettalex platform.
+Welcome to the guide on trading with Mettalex's revolutionary Agent-based architecture also known as fetch.ai agent technology. In this section, you'll learn how to place and manage trades using the Mettalex platform.
 
 Placing a Trade
 Trading on Mettalex involves a straightforward process that takes advantage of the platform's Agent-based system. Here's how it works:

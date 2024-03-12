@@ -37,7 +37,7 @@ from langchain.chains import LLMChain
 from langchain.chains.combine_documents.stuff import StuffDocumentsChain
 
 openAIClient = CreateClient()
-llm = ChatOpenAI(temperature=0, openai_api_key="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", model_name="gpt-3.5-turbo")
+llm = ChatOpenAI(temperature=0, openai_api_key="", model_name="gpt-3.5-turbo")
 
 def get_embedding(text, model="text-embedding-ada-002"):
     text = text.replace("\n", " ")
@@ -62,18 +62,12 @@ def logic(question):
 
     bot_message = ""
     product_embedding = get_embedding(question) # Creating an embedding for the question that's been asked
-    print('product_embedding')
-    print(product_embedding)
-    print("\n\n\n\n\n")
-    print("df.embedding")
-    print(df.embedding)
     df["similarity"] = df.embedding.apply(lambda x: cosine_similarity(x, product_embedding)) # Finds the relevance of each piece of data in context of the question
     df.to_csv("embs0.csv")
 
     df2 = df.sort_values("similarity", ascending=False) # Sorts the text chunks based on how relevant they are to finding the answer to the question
     df2.to_csv("embs0.csv")
     df2 = pandas.read_csv("embs0.csv")
-    #print(df2["similarity"][0])
 
     from langchain.docstore.document import Document
 
@@ -127,29 +121,52 @@ def logic(question):
     # output = chain.run(docs) # Formulating an answer (this is where the magic happens)
 
 
-    # Define prompt
+    # # Define prompt
+    # prompt = PromptTemplate.from_template( question + """
+    # Use the following pieces of context to answer the question at the end. If you 
+    # don't know the answer, just say that you don't know, don't try to make up an 
+    # answer.
+
+    # =====================================================================================================================================
+    # PERSONAL DETAILS
+    # =====================================================================================================================================
+    # Here are few details about you.
+    # - You are Mettalex GPT.
+    # - You have been developed by Mettalex.
+    # - You were born on 11th March 2024
+    # =====================================================================================================================================
+
+    # =====================================================================================================================================
+    # DETAILS ON PLACING A TRADE ONLY
+    # =====================================================================================================================================
+    # - Be sure if user is asking for a trade pair then only consider the details for DETAILS ON PLACING A TRADE ONLY else skip.
+    # - Return the response in JSON format,
+    # - The JSON object should contains the following fields - TO_PRICE, TO, FROM_PRICE and FROM.
+    # - Price of TO and FROM will be specified by the user, if only one price is provided then use same price for both i.e. TO_PRICE and FROM_PRICE will be same.
+    # - The price field should be a number and make sure you keep the number same as provided so take care of the JSON object accordingly.
+    #   For example user can provide price as 1, 100, 0.1, 10.235, 1.00215, 0.002 and etc.
+    # - The value of token/product user wants to trade will be provided and should be mapped in TO and FROM fields accodingly.
+    # - The supported trade pairs strictly are FET, USDT and ATESTFET. If user is providing any other value for TO and FROM than this, the please return error message
+    #   saying - Trade pair not supported.
+    # - If the value of TO and FROM are other than FET, USDT and ATESTFET then please return error -Trade pair not supported.
+    # =====================================================================================================================================
+
+
+    
+    # {context}
+    
+    # """)
+
+
     prompt = PromptTemplate.from_template( question + """
-    Use the following pieces of context to answer the question at the end. If you 
-    don't know the answer, just say that you don't know, don't try to make up an 
-    answer.
-
-    Do not justify your answers and do not give information not mentioned in the provided embeddings.
-
-    If the instruction is about placing a trade then please note these points: 
-    Return the response in JSON format,
-    The JSON object should contains the following fields - TO_PRICE, TO, FROM_PRICE and FROM.
-    Here are the details that you have to look for mapping the correct data to each key -
-    Price of TO and FROM will be specified by the user, if only one price is provided then use same price for both
-    i.e. TO_PRICE and FROM_PRICE will be same.
-    The price field should be a number and make sure you keep the number same as provided so take care of the JSON object accordingly.
-    For example user can provide price as 1, 100, 0.1, 10.235, 1.00215, 0.002 and etc.
-    The the of token/product user wants to trade will be provided and should be mapped in TO and FROM fields accodingly.
-
-    If you feel some information is missing or the user is asking questions outside the scope of the provided embedding then you should
-    return a gracefull message for example - Provided information is not complete or I am not trained to answer such questions.
-    
+    Mettalex GPT, an AI developed by Mettalex, was born on March 11, 2024. 
+    When it comes to placing trades, specific guidelines must be followed. 
+    Requests for trade pairs should be responded to in JSON format, including fields such as TO_PRICE, TO, FROM_PRICE, and FROM. 
+    Users can input prices for the tokens they wish to trade, with the option to specify the same price for both TO and FROM tokens. 
+    The requested tokens for trading will be allocated accordingly to the TO and FROM fields. 
+    It's crucial to note that only trade pairs involving FET, USDT, and ATESTFET are supported. 
+    Any other values inputted for TO and FROM will result in an error message indicating that the trade pair is not supported.
     {context}
-    
     """)
     llm_chain = LLMChain(llm=llm, prompt=prompt)
     stuff_chain = StuffDocumentsChain(llm_chain=llm_chain, document_variable_name="context")
